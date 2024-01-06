@@ -1,6 +1,6 @@
 
 
-{% MACRO data_file(date_column) %}
+{% MACRO select_column_data(date_column) %}
 (select struct(
     {{date_column}} as original_date,
     EXTRACT(year from {{date_column}}) as year,

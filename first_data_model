@@ -1,0 +1,12 @@
+with customer as 
+(select * from {{ref{'PB_BASE.CUST_01'}}}),
+
+nation as 
+(select * from {{ref{'PB_BASE.NATION_01'}}}),
+
+region as
+(select * from {{ref{PB_BASE.REGION_01}}}),
+
+order as 
+(select * from {{ref{PB_BASE.PB_SCHEMA.ORDER_01}}}),
+

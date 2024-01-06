@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: first_sample_dbt_model
+    database: PB_BASE
+    schema: PB_SCHEMA
+    tables:
+      - name: CUST_01
+      - name: NATION_01
+      - name: ORDER_01
+      - name: REGION_01
+
+
+
+models:
+  - name: CUST_01
+    columns:
+      - name: C_CUSTKEY
+        tests:
+          - unique:
+          - not_null:
+      - name: C_NAME
+      - name: C_ADDRESS
+      - name: C_NATIONKEY
+      - name: C_PHONE
+      - name: C_ACCTBAL
+      - name: C_MKTSEGMENT
+      - name: C_COMMENT
+              
